@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.pc1.tuvung_everyday.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45"
+            android:orientation="vertical"
+
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Nhập Từ Vựng"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical">
+
+                    <EditText
+
+                        android:id="@+id/edtTA"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="30"
+                        android:ems="10"
+                        android:hint="Nhập từ vựng"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/edtTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="30"
+                        android:ems="10"
+                        android:hint="Nghĩa của nó"
+                        android:inputType="textPersonName" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="30"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:id="@+id/btnAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:onClick="Click_Button"
+                            android:text="Add" />
+
+                        <Button
+                            android:id="@+id/btnDelete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:onClick="Click_Button"
+                            android:text="Delete" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/khungList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtTitleList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Các từ đươc thêm"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <ListView
+
+                android:id="@+id/lvTuVuaNhap"
+                style="@android:style/Widget.Holo.ExpandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:cacheColorHint="@android:color/holo_blue_light"
+                android:divider="@color/cardview_shadow_start_color"
+                android:dividerHeight="@dimen/cardview_compat_inset_shadow"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStartRun"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="notification"
+            android:text="Start Run" />
+
+    </LinearLayout>
+
+</LinearLayout>
